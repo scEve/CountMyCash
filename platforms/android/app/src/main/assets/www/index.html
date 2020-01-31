@@ -33,7 +33,7 @@
     <title>CountMyCash!</title>
 </head>
 <body>
-    <div class="home ui-content centering" data-role="page" id="homePage">
+    <div class="home ui-content centeringHome" data-role="page" id="homePage">
         <div class="gap"></div>
         <div class="text startText">Behalte Ausgaben im Überblick<br />-<br />jederzeit von überall</div>
         <div class="gap"></div>
@@ -42,10 +42,11 @@
 
     <div class="start" data-role="page" id="startPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" id="1" />
         </div>
         <div data-role="main" class="ui-content centering">
+            <div class="gap"></div>
             <div class="text">Gib bitte den gewünschten Monat<br />und dein verfügbares Kapital an:</div>
             <div class="gap"></div>
             <input type="text" placeholder="Monat" id="inpMonth" name="inpMonth" />
@@ -59,17 +60,20 @@
 
     <div class="input" data-role="page" id="inputPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" />
         </div>
         <div data-role="main" class="ui-content centering">
-            <div class="text">Gib eine Ausgabe an oder<br/>schau dir deine aktuelle Übersicht an:</div>
+            <div class="text">Gib eine Ausgabe an oder<br />schau dir deine aktuelle Übersicht an:</div>
+            <div class="gapSmall"></div>
             <div class="text" id="selDate1">Januar 2020</div>
             <div class="text" id="selMoney1">noch 0€</div>
+            <div class="gapSmall"></div>
             <form>
                 <input type="text" placeholder="Für was?" id="inpType" name="inpType" />
                 <input type="text" placeholder="Wie viel?" id="inpAmount" name="inpAmount" />
             </form>
+            <div class="gapSmall"></div>
             <button class="btn" id="btnAdd">Hinzufügen</button>
             <button class="btn" id="btnList">Zur Übersicht</button>
         </div>
@@ -77,12 +81,14 @@
 
     <div class="list" data-role="page" id="listPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" />
         </div>
         <div data-role="main" class="ui-content centering">
+            <div class="gap"></div>
             <span class="text" id="selDate2">Januar 2020</span>
             <span class="text" id="selMoney2">0€</span>
+            <div class="gapSmall"></div>
             <div id="scrollList">
                 <ul id="myList"></ul>
             </div>

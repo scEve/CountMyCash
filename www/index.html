@@ -2,15 +2,6 @@
 
 <html>
 <head>
-    <!--
-    Customize this policy to fit your own app's needs. For more guidance, see:
-        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-    Some notes:
-        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-            * Enable inline JS: add 'unsafe-inline' to default-src
-    -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -21,19 +12,13 @@
 
     
     <script type="text/javascript" src="cordova.js"></script>
-    
     <script type="text/javascript" src="jqueryMobile/jqueryBib.js"></script>
-    <!--
-    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
-    <script src="jqueryMobile/jquery-1.10.2.min.js"></script> -->
-
     <script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
 
     <title>CountMyCash!</title>
 </head>
 <body>
-    <div class="home ui-content centering" data-role="page" id="homePage">
+    <div class="home ui-content centeringHome" data-role="page" id="homePage">
         <div class="gap"></div>
         <div class="text startText">Behalte Ausgaben im Überblick<br />-<br />jederzeit von überall</div>
         <div class="gap"></div>
@@ -42,10 +27,11 @@
 
     <div class="start" data-role="page" id="startPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" id="1" />
         </div>
         <div data-role="main" class="ui-content centering">
+            <div class="gap"></div>
             <div class="text">Gib bitte den gewünschten Monat<br />und dein verfügbares Kapital an:</div>
             <div class="gap"></div>
             <input type="text" placeholder="Monat" id="inpMonth" name="inpMonth" />
@@ -59,17 +45,20 @@
 
     <div class="input" data-role="page" id="inputPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" />
         </div>
         <div data-role="main" class="ui-content centering">
-            <div class="text">Gib eine Ausgabe an oder<br/>schau dir deine aktuelle Übersicht an:</div>
+            <div class="text">Gib eine Ausgabe an oder<br />schau dir deine aktuelle Übersicht an:</div>
+            <div class="gapSmall"></div>
             <div class="text" id="selDate1">Januar 2020</div>
             <div class="text" id="selMoney1">noch 0€</div>
+            <div class="gapSmall"></div>
             <form>
                 <input type="text" placeholder="Für was?" id="inpType" name="inpType" />
                 <input type="text" placeholder="Wie viel?" id="inpAmount" name="inpAmount" />
             </form>
+            <div class="gapSmall"></div>
             <button class="btn" id="btnAdd">Hinzufügen</button>
             <button class="btn" id="btnList">Zur Übersicht</button>
         </div>
@@ -77,12 +66,14 @@
 
     <div class="list" data-role="page" id="listPage">
         <div data-role="header" class="header">
-            <img src="img/exp/logoSmall.png" alt="CountMyCash!" class="logoHeader" />
+            <img src="img/exp/logo.png" alt="CountMyCash!" class="logoHeader" />
             <img src="img/exp/KomAbbruch.png" alt="Abbruch" class="cancelHeader" />
         </div>
         <div data-role="main" class="ui-content centering">
+            <div class="gap"></div>
             <span class="text" id="selDate2">Januar 2020</span>
             <span class="text" id="selMoney2">0€</span>
+            <div class="gapSmall"></div>
             <div id="scrollList">
                 <ul id="myList"></ul>
             </div>

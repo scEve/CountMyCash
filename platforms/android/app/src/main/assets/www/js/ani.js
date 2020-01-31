@@ -37,3 +37,11 @@ $(".cancelHeader").click(function () {
     $("#inpType").val("");
     $("#inpAmount").val("");
 });
+
+$(window).resize (function () {
+    var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+
+    if (orientation === "landscape-primary" || orientation === "landscape-secondary") {
+        alert("Bitte verwende mich nur im Porträt-Modus!");
+    }
+});
